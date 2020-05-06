@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0,0,257,0.5);
+  font-family: Arial
+
+}
+
+#score {
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 10%;
+  font-size: 25px;
+  background: white;
+  color: #454545;
+  padding: 15px;
+  box-shadow: 4px 4px 4px 1px #808080;
+}
+#box{
+  width: 40%;
+  height: 100vh;
+  left: 35%;
+  background: #888;
+  overflow: hidden;
+  position: relative;
+}
+.line{
+  position: absolute;
+  width:  4%;
+  margin-left: 48%
+  background: rgba(255,255,255,0.8);
+}
+.line1{
+  top: -150px;
+}
+.line2{
+  top: 150px;
+}
+.line3{
+  top: 450px;
+}
+.moped{
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  border-radius: 5px;
+}
+#moped1{
+  bottom:10px;
+  left: 60%;
+  background: red;
+
+}
+.mopeds{
+  width: 100%;
+  height: 20%;
+  background:  #484848;
+  position: absolute;
+
+}
+#moped2{
+  top: -100px;
+  left: 60%;
+  background: green;
+}
+#moped3{
+  top: -200px;
+  left: 40%;
+  background: green;
+}
+#moped4{
+  top: -350px;
+  left: 50%;
+  background: green;
+}
+#restart-div{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+   width: 100%;
+   height: 100px;
+   background: #292929;
+   line-height: 100vh;
+   display: none;
+}
+#restart{
+  display: block;
+  width: 50%;
+  height: 80px;
+  background: #8a64ff;
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  margin-left: 20%;
+  margin-top: 50%;
+}
+/*Game*/
