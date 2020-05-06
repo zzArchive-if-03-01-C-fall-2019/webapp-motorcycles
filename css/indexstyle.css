@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+body {
+	font-family: Arial;
+	background-size: cover;
+	margin: 20px 300px 20px 300px;
+	/*background-color: darkblue;*/
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+
+/*border-radius: 15000px;*/
+}
+.header{
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+.footer{
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 25px;
+}
+/* Header/Blog Title */
+#logo-left{
+	float: left;
+	padding-left: 40px;
+}
+#logo-right{
+	float: right;
+	padding-right: 40px;
+}
+.clearfix{overflow: auto;}
+.header {
+	text-align: center;
+	background-image: linear-gradient(to right, black, white, black);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.header h2 {
+	font-family: 'Mansalva', cursive;
+	text-shadow: 0 0 3px #FF0000;
+  	font-size: 50px;
+  	color: black;
+}
+.header p {
+	font-family: 'Permanent Marker', cursive;
+	text-shadow: 0 0 3px #FF0000;
+  	font-size: 30px;
+  	color: black;
+}
+.header img{
+	width: 200px;
+	height: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 6% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+td{
+	background-color: dimgrey;
+}
+#motorbikemaker p	{
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#motorbikemaker {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#motoracerage{
+	color: white;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Header/Blog Title */
+
+/*
+.picturelefttop{
+float: right;
+}
+.picturelefttop p{
+	color: white;
+	font-size: 20px;
+}
+.picturtoprigth{
+float: right;
+display: flex;
+    justify-content: right;
+    align-items: Top;
+}
+.picturebotenleft{
+	float: left;
+	display: flex;
+	    justify-content: left;
+	    align-items: bottom;
+}*/
+/*Slider*/
+#carouselExampleIndicators{text-align: center;}
+#slider{
+	background-color: white;
+}
+#slider img {
+	height: 400px;
+	width: auto;
+}
+/*Slider*/
+
+/*Navbar*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, black, white, black);
+}
+nav li {
+    float: left;
+    padding: 10px;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+/*Navbar*/
+
+/*Main*/
+.main {
+	background-color: dimgrey;
+	padding: 50px 20px 50px 20px;
+}
+.main img{
+	height: 128px;
+	width: auto;
+}
+/*Main*/
+
+/*motorbikes*/
+#motorbikes{
+	padding-top: 20px;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+#motorbikes img{
+	width: 450px;
+	height: auto;
+}
+#linear-gardient p {
+	display: flex;
+		justify-content: center;
+		align-items: center;
+	background-image:
+linear-gradient(to right, red, yellow, green, blue);
+}
+/*table {
+  	font-family: arial, sans-serif;
+  	border-collapse: collapse;
+  	width: 50%;
+	border: 2px solid black;
+}*/
+td, th {
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: beige;
+}
+/*motorbikes*/
+
+/* Footer */
+.footer {
+  	padding: inherit;
+  	text-align: center;
+  	background: black;
+}
+.footer h2{
+
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 30px;
+}
+.footer p {
+	color: white;
+}
+/* Footer */

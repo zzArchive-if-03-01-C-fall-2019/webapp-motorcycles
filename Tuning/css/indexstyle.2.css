@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+body {
+    font-family: Arial;
+    background-size: cover;
+    margin: 20px 300px 20px 300px;
+    /*background-color: darkblue;*/
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.header{
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+.footer{
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 25px;
+}
+/* Header/Blog Title */
+#logo-left{
+    float: left;
+    padding-left: 40px;
+}
+#logo-right{
+    float: right;
+    padding-right: 40px;
+}
+.clearfix{overflow: auto;}
+.header {
+    text-align: center;
+    background-image: linear-gradient(to right, black, white, black);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header h2 {
+    font-family: 'Mansalva', cursive;
+    text-shadow: 0 0 3px #FF0000;
+    font-size: 50px;
+    color: black;
+}
+.header p {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 0 0 3px #FF0000;
+    font-size: 30px;
+    color: black;
+}
+.header img{
+	width: 200px;
+	height: auto;
+}
+/* Header/Blog Title */
+
+/*Navbar*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right, black, white, black);
+}
+nav li {
+    float: left;
+    padding: 10px;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+
+
+/*Navbar*/
+
+/*Slider*/
+#carouselExampleIndicators{text-align: center;}
+#slider{
+	background-color: white;
+}
+#slider img {
+	height: 400px;
+	width: auto;
+}
+/*Slider*/
+
+/*Main*/
+.main {
+	background-color: dimgray;
+	padding: 50px 20px 50px 20px;
+}
+.main h2,h3{
+	color: white;
+}
+.main img {
+    height: 150px;
+    width: auto;
+    float: right;
+    padding-right: 100px;
+}
+/*Main*/
+
+/* Footer */
+.footer {
+    padding: inherit;
+    text-align: center;
+    background: black;
+}
+.footer h2{
+
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 30px;
+}
+.footer p {
+    color: white;
+}
+/* Footer */
