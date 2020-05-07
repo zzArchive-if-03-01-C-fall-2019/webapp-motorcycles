@@ -32,6 +32,7 @@ body {
   position: absolute;
   width:  4%;
   margin-left: 48%
+
   background: rgba(255,255,255,0.8);
 }
 .line1{
@@ -65,12 +66,12 @@ body {
 #moped2{
   top: -100px;
   left: 60%;
-  background: green;
+  background: blue;
 }
 #moped3{
   top: -200px;
   left: 40%;
-  background: green;
+  background: red;
 }
 #moped4{
   top: -350px;
@@ -100,3 +101,21 @@ body {
   margin-top: 50%;
 }
 /*Game*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, black, white, black);
+}
+nav li {
+    float: left;
+    padding: 10px;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}

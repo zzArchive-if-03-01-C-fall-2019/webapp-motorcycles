@@ -13,14 +13,14 @@ $(function() {
     var restart_div = $('#restart-div');
     var restart_btn = $('#restart');
     var score = $('#scor');
-    var high_score = localStorage.getItem('scor');
-    $('#scor').text(high_score);
+    var high_score = localStorage.getItem('high_score');
+    $('#high_score').text(high_score);
 
     var container_left = parseInt(container.css('left'));
     var container_width = parseInt(container.width());
     var container_height = parseInt(container.height());
-    var moped_width = parseInt(moped.width());
-    var moped_height = parseInt(moped.height());
+    var moped_width = parseInt(moped1.width());
+    var moped_height = parseInt(moped1.height());
 
     var game_over = false;
 
@@ -91,7 +91,7 @@ $(function() {
     }
 
     function down() {
-        if (game_over === false && parseInt(moped1.css('top')) < container_height - moped1_height) {
+        if (game_over === false && parseInt(moped1.css('top')) < container_height - moped_height) {
             moped1.css('top', parseInt(moped1.css('top')) + 3);
             move_down = requestAnimationFrame(down);
         }
