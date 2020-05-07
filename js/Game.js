@@ -2,11 +2,11 @@ $(function() {
 
     var anim_id;
 
-    var container = $('#container');
-    var car = $('#moped1');
-    var car_1 = $('#moped2');
-    var car_2 = $('#moped3');
-    var car_3 = $('#moped4');
+    var container = $('#box');
+    var moped1 = $('#moped1');
+    var moped2 = $('#moped2');
+    var moped3 = $('#moped3');
+    var moped4 = $('#moped4');
     var line_1 = $('#line1');
     var line_2 = $('#line2');
     var line_3 = $('#line3');
@@ -19,8 +19,8 @@ $(function() {
     var container_left = parseInt(container.css('left'));
     var container_width = parseInt(container.width());
     var container_height = parseInt(container.height());
-    var car_width = parseInt(car.width());
-    var car_height = parseInt(car.height());
+    var moped_width = parseInt(moped.width());
+    var moped_height = parseInt(moped.height());
 
     var game_over = false;
 
@@ -70,29 +70,29 @@ $(function() {
     });
 
     function left() {
-        if (game_over === false && parseInt(car.css('left')) > 0) {
-            car.css('left', parseInt(car.css('left')) - 5);
+        if (game_over === false && parseInt(moped1.css('left')) > 0) {
+            moped1.css('left', parseInt(moped1.css('left')) - 5);
             move_left = requestAnimationFrame(left);
         }
     }
 
     function right() {
-        if (game_over === false && parseInt(car.css('left')) < container_width - car_width) {
-            car.css('left', parseInt(car.css('left')) + 5);
+        if (game_over === false && parseInt(moped1.css('left')) < container_width - moped_width) {
+            moped1.css('left', parseInt(moped1.css('left')) + 5);
             move_right = requestAnimationFrame(right);
         }
     }
 
     function up() {
-        if (game_over === false && parseInt(car.css('top')) > 0) {
-            car.css('top', parseInt(car.css('top')) - 3);
+        if (game_over === false && parseInt(moped1.css('top')) > 0) {
+            moped1.css('top', parseInt(moped1.css('top')) - 3);
             move_up = requestAnimationFrame(up);
         }
     }
 
     function down() {
-        if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
-            car.css('top', parseInt(car.css('top')) + 3);
+        if (game_over === false && parseInt(moped1.css('top')) < container_height - moped1_height) {
+            moped1.css('top', parseInt(moped1.css('top')) + 3);
             move_down = requestAnimationFrame(down);
         }
     }
@@ -100,7 +100,7 @@ $(function() {
     anim_id = requestAnimationFrame(repeat);
 
     function repeat() {
-        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3)) {
+        if (collision(moped1, moped2) || collision(moped1, moped3) || collision(moped1, moped4)) {
             stop_the_game();
             return;
         }
@@ -115,9 +115,9 @@ $(function() {
             line_speed++;
         }
 
-        car_down(car_1);
-        car_down(car_2);
-        car_down(car_3);
+        moped_down(moped2);
+        moped_down(moped3);
+        moped_down(moped4);
 
         line_down(line_1);
         line_down(line_2);
@@ -126,14 +126,14 @@ $(function() {
         anim_id = requestAnimationFrame(repeat);
     }
 
-    function car_down(car) {
-        var car_current_top = parseInt(car.css('top'));
-        if (car_current_top > container_height) {
-            car_current_top = -200;
-            var car_left = parseInt(Math.random() * (container_width - car_width));
-            car.css('left', car_left);
+    function moped_down(moped) {
+        var moped_current_top = parseInt(moped.css('top'));
+        if (moped_current_top > container_height) {
+            moped_current_top = -200;
+            var moped_left = parseInt(Math.random() * (container_width - moped_width));
+            moped.css('left', moped_left);
         }
-        car.css('top', car_current_top + speed);
+        moped.css('top', moped_current_top + speed);
     }
 
     function line_down(line) {
