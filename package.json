@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.1"
+    "bcrypt": "^5.0.0",
+    "json-server": "^0.16.1",
+    "password-hash": "^1.2.2"
   }
 }

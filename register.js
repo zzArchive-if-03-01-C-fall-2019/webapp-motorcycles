@@ -1,44 +1,79 @@
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+
 function RegisterUser(){
-    var error = "";
-    var email = document.querySelector("#email").value;
-    var password = document.querySelector("#password").value;
-    var password2 = document.querySelector("#password2").value;
-    var username = document.querySelector("#username").value;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "db.json", true);
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
+    let password2 = document.querySelector("#password2").value;
+    let username = document.querySelector("#username").value;
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4) {
-            var data = JSON.parse(xhr.responseText);
+    const bcrypt = require('bcrypt');
 
-            if (email == "") {
-                error = "Please enter your email!";
-            } else if (password == "") {
-                error = "Please enter your password <br>";
-            } else if (password2 == "") {
-                error = "Please enter your password again<br>";
-            } else if (username == "") {
-                error = "Please enter your username <br>";
-            } else {
-                if (password != password2) {
-                    error = "passwords do not match";
-                }
-                else{
-                    for (var i = 0; i < data.users.length; i++) {
-                        if (email == data.users[i].email) {
-                            error = "This email is in using";
-                        } else {
-                            console.log(JSON.stringify({
+    bcrypt.hash(password, 10).then(
+        hash => {
+            console.log('Your hash: ', hash);
+        },
+        err => {
+            console.log(err);
+        }
+    );
+
+    /*bcrypt.compare(password, hash).then(
+        result => {
+            console.log('Submitted password is correct');
+        },
+        err => {
+            console.log(err);
+        }
+    );*/
+
+    fetch("http://localhost:3000/users?email=" + email).then (response => response.json())
+        .then(function(data){
+            if(isEmpty(data)){
+                fetch("http://localhost:3000/users?username=" + username).then (response => response.json())
+                    .then(function(data){
+
+                        if(isEmpty(data)){
+                            let newUser = {
                                 username: username,
                                 email: email,
-                                password: password,
-                                rankId: 3
-                            }));
+                                password: hash,
+                                rankId : 3
+                            };
+
+                            fetch('http://localhost:3000/users', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(newUser),
+                            })
+                                .then(response => response.json())
+                                .then(data => {
+                                    //newUser created
+                                    console.log("neu angelegt worden");
+                                })
+                                .catch((error) => {
+                                    console.error('Error:', error);
+                                });
                         }
-                    }
-                }
+                        else {
+                            console.log("user vorhanden");
+                        }
+                    });
             }
-        }
-    }
+            else {
+                console.log("email vorhanden");
+            }
+        })
+        .catch( function (error) {
+            console.error("error: " + error);
+        });
 }

@@ -1,43 +1,35 @@
 function CheckLogin(){
-    var error = "";
-    var email = document.querySelector("#email").value;
-    var password = document.querySelector("#password").value;
+    login();
+}
 
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
 
+function login(){
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "db.json", true);
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4) {
-            var data = JSON.parse(xhr.responseText);
-
-            if(email == ""){
-                error = "Please enter your email!";
-            }
-            else if(password == ""){
-                error = "Please enter your password <br>";
+    fetch("http://localhost:3000/users?email=" + email + "&password=" + password).then (response => response.json())
+        .then(function(data){
+            if(isEmpty(data)){
+                //user email exsitiert nicht oder passwort falcsh und email richtig 1 ist flasch
+                console.log("falsch");
             }
             else {
-                for(var i = 0; i < data.users.length; i++){
-                    if(email == data.users[i].email){
-                        if(password == data.users[i].password){
-                            console.log("Es geht endlich");
-                        }
-                        else{
-                            error = "Email or password is incorrect <br>";
-                        }
-                    }else {
-                        error = "This Email does not exist <br>";
-                    }
-                }
+                //richtig
+                console.log("richtig ");
+
+                //cookie
+
             }
-            if(error != ""){
-                if(document.getElementById("error").style.display == "none")
-                    document.getElementById("error").style.display = "block";
-                document.getElementById("error").innerHTML = error;
-            }
-        }
-    }
-    xhr.send(null);
+        })
+        .catch( function (error) {
+            console.error("error: " + error);
+        });
 }

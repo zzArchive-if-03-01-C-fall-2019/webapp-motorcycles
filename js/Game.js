@@ -1,7 +1,6 @@
 $(function() {
 
     var anim_id;
-
     var container = $('#box');
     var moped1 = $('#moped1');
     var moped2 = $('#moped2');
@@ -126,6 +125,7 @@ $(function() {
         anim_id = requestAnimationFrame(repeat);
     }
 
+
     function moped_down(moped) {
         var moped_current_top = parseInt(moped.css('top'));
         if (moped_current_top > container_height) {
@@ -187,7 +187,10 @@ $(function() {
         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
         return true;
     }
-
-
-
 });
+
+//Grundgerüst wurde mit Markus schwarz aufgebaut als Team
+
+
+
+
