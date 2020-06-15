@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+body {
+	font-family: Arial;
+	background-size: cover;
+	margin: 20px 200px 20px 200px;
+	/*background-color: darkblue;*/
+	background-image: url("../../img/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+
+/*border-radius: 15000px;*/
+}
+.all{
+  padding: inherit;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+}
+.header{
+  padding: inherit;
+  text-align: center;
+  background: lightgrey;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+/*
+.main{
+  padding: inherit;
+  text-align: center;
+  background: gray;
+  margin-top: 0px;
+  padding-top: 0px;
+}*/
+
+.footer{
+  padding: inherit;
+  text-align: center;
+  background: lightgrey;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.header p{
+  color:   #fed8b1;
+  font-size: 20px;
+    text-shadow: 0 0 7px #000000;
+
+}
+
+h1{
+  text-align: center;
+  color: pink;
+  text-shadow: 0 0 7px #000000;
+
+
+}
+p{
+  color: gray;
+}
+.footer p{
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 0 0 7px #000000;
+
+  color: pink;
+
+}
