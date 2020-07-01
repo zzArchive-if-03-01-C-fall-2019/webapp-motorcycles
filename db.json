@@ -6,6 +6,13 @@
       "password": "1234",
       "rankId": 1,
       "id": 1
+    },
+    {
+      "username": "Markus",
+      "email": "testmail@.com12",
+      "password": "1234",
+      "rankId": 3,
+      "id": 2
     }
   ],
   "rank": [
