@@ -8,31 +8,10 @@ function isEmpty(obj) {
 
 
 function RegisterUser(){
-
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
     let password2 = document.querySelector("#password2").value;
     let username = document.querySelector("#username").value;
-
-    const bcrypt = require('bcrypt');
-
-    bcrypt.hash(password, 10).then(
-        hash => {
-            console.log('Your hash: ', hash);
-        },
-        err => {
-            console.log(err);
-        }
-    );
-
-    /*bcrypt.compare(password, hash).then(
-        result => {
-            console.log('Submitted password is correct');
-        },
-        err => {
-            console.log(err);
-        }
-    );*/
 
     fetch("http://localhost:3000/users?email=" + email).then (response => response.json())
         .then(function(data){
@@ -44,7 +23,7 @@ function RegisterUser(){
                             let newUser = {
                                 username: username,
                                 email: email,
-                                password: hash,
+                                password: password,
                                 rankId : 3
                             };
 

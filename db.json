@@ -2,10 +2,17 @@
   "users": [
     {
       "username": "David",
-      "email": "testmail@.com",
+      "email": "testmail@com",
       "password": "1234",
       "rankId": 1,
       "id": 1
+    },
+    {
+      "username": "testmail@com2",
+      "email": "Fabian",
+      "password": "1234",
+      "rankId": 3,
+      "id": 2
     }
   ],
   "rank": [

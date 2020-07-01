@@ -13,6 +13,7 @@ body {
 
 /*border-radius: 15000px;*/
 }
+
 .all{
   padding: inherit;
   text-align: center;
@@ -23,8 +24,7 @@ body {
   padding: inherit;
   text-align: center;
   background: lightgrey;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+
 }
 /*
 .main{
@@ -66,5 +66,25 @@ p{
   text-shadow: 0 0 7px #000000;
 
   color: pink;
+}
 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+	background: lightgrey;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+nav li {
+    float: left;
+    padding: 10px;
+}
+nav li a {
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
 }
