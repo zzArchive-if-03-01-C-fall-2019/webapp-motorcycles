@@ -5,7 +5,6 @@ body {
 	font-family: Arial;
 	background-size: cover;
 	margin: 20px 200px 20px 200px;
-	/*background-color: darkblue;*/
 	background-image: url("../../img/background.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -17,13 +16,13 @@ body {
 .all{
   padding: inherit;
   text-align: center;
-  background: white;
+  background: dimgrey;
   border-radius: 25px;
 }
 .header{
   padding: inherit;
   text-align: center;
-  background: lightgrey;
+	background-image: linear-gradient(to right, black, lightgray, black);
 
 }
 /*
@@ -38,13 +37,14 @@ body {
 .footer{
   padding: inherit;
   text-align: center;
-  background: lightgrey;
+  background: black;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
 
 .header p{
-  color:   #fed8b1;
+	color: red;
+  /*color:   #fed8b1;*/
   font-size: 20px;
     text-shadow: 0 0 7px #000000;
 
@@ -52,20 +52,21 @@ body {
 
 h1{
   text-align: center;
-  color: pink;
+	color: red;
   text-shadow: 0 0 7px #000000;
 
 
 }
 p{
-  color: gray;
+  color: white;
 }
 .footer p{
   text-align: center;
   font-size: 20px;
   text-shadow: 0 0 7px #000000;
 
-  color: pink;
+	color: red;
+
 }
 
 nav ul {
@@ -73,7 +74,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-	background: lightgrey;
+	background-image: linear-gradient(to right, black, lightgrey, black);
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
 }
@@ -83,7 +84,7 @@ nav li {
 }
 nav li a {
   display: block;
-  color: grey;
+  color: white;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
