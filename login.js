@@ -21,16 +21,27 @@ function CheckLogin(){
                 //richtig
                 console.log("richtig ");
                 //cookie
+<<<<<<< HEAD
                 window.location = "LoggedIn/index.html";
                 //checkCookie(email);
+=======
+                checkCookie(email);
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f
             }
         });
 }
 
+<<<<<<< HEAD
 /*function checkCookie(email) {
    // var user = getCookie();
     if (user != "") {
         //console.log("cookie wurde befüllt");
+=======
+function checkCookie(email) {
+    var user = getCookie();
+    if (user != "") {
+        console.log("cookie wurde befüllt");
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f
         window.location = "LoggedIn/index.html";
     } else {
         fetch("http://localhost:3000/users?email=" + email).then (response => response.json())
@@ -41,7 +52,11 @@ function CheckLogin(){
                 }
                 else {
                     if (data != "" && data != null) {
+<<<<<<< HEAD
                         //setCookie("username", data.username, 1);
+=======
+                        setCookie("username", data.username, 1);
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f
                         window.location = "LoggedIn/index.html";
                     }
                     else {
@@ -57,7 +72,11 @@ function CheckLogin(){
 
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
+<<<<<<< HEAD
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+=======
+    d.setTime(d.getTime() + (exdays*24*60*60*1));
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f
     var expires = "expires=" + d.toGMTString();
     document.cookie = cvalue;
 }
@@ -76,4 +95,8 @@ function getCookie(cname) {
         }
     }
     return "";
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f

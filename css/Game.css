@@ -6,6 +6,7 @@ body {
   width: 100%;
   margin: 0;
   background-color: rgba(0,0,257,0.5);
+  background-color: darkred;
   font-family: Arial
 
 }
@@ -71,7 +72,7 @@ body {
 #moped3{
   top: -200px;
   left: 40%;
-  background: red;
+  background: orange;
 }
 #moped4{
   top: -350px;

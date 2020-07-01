@@ -2,14 +2,19 @@
   "users": [
     {
       "username": "David",
-      "email": "testmail@.com",
+      "email": "testmail@com",
       "password": "1234",
       "rankId": 1,
       "id": 1
     },
     {
+<<<<<<< HEAD
       "username": "Markus",
       "email": "testmail@.com12",
+=======
+      "username": "testmail@com2",
+      "email": "Fabian",
+>>>>>>> 4051f85e94bbeeee87e73283720189cc51fa345f
       "password": "1234",
       "rankId": 3,
       "id": 2
